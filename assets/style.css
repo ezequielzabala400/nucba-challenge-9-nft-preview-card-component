@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --VerydarkblueMain: hsl(217, 54%, 11%);
+    --VerydarkblueCard: hsl(216, 50%, 16%);
+    --Verydarkblueline: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--VerydarkblueMain);
+}
+
+.Card{
+    padding: 30px;
+    margin: 90px auto;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--VerydarkblueCard);
+    color: white;
+    border-radius: 20px;
+}
+
+.Card__ImageDiv{
+    background: var(--Cyan);
+}
+
+.Card__Image, .Card__ImageDiv{
+    position: relative;
+    height: 200px;
+    width: 240px;
+    border-radius: 10px;
+}
+
+.eye{
+    visibility: hidden;
+    position: absolute;
+    margin: auto;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Card__ImageDiv:hover .eye{
+    visibility: unset;
+    cursor: pointer;
+    
+}
+
+.Card__ImageDiv:hover .Card__Image{
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+
+
+
+
+.Card__Info{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.Card__Title{
+    font-size: 2rem;
+    color: var(--White);
+}
+
+.Card__Title:hover{
+    color: var(--Cyan);
+}
+
+.Card__Text{
+    font-size: 1.6rem;
+    color: var(--Softblue);
+    font-weight: 300;
+}
+
+.Card__Values{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Card__Values p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+.Card__Values p:first-child{
+    color: var(--Cyan);
+}
+
+.Card__Values p:last-child{
+    color: var(--Softblue);
+}
+
+.divider{
+    height: 2px;
+    width: 100%;
+    background-color: var(--Verydarkblueline);
+}
+
+.Card__User{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.Card__User img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.Card__User p{
+    font-size: 1.2rem;
+    color: var(--Softblue);
+}
+
+.Card__User p span{
+    color: var(--White);
+}
+
+.Card__User p span:hover{
+    color: var(--Cyan);
+}
